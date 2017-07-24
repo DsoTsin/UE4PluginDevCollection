@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "GpuUsage",
+	"Description": "Query the utilization of GPU in the runtime",
+	"Category": "Other",
+	"CreatedBy": "dsotsen",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "GpuUsage",
+			"Type": "Developer",
+			"LoadingPhase": "Default"
+		}
+	]
+}
