@@ -36,7 +36,7 @@ void AGpuView::DrawHUD()
 #endif // HMD_MODULE_INCLUDED
   if (bHMDDeviceActive == false)
   {
-    auto Module = FModuleManager::GetModuleChecked<FGpuUsageModule>(FName("GpuUsage"));
+    auto& Module = FModuleManager::LoadModuleChecked< IGpuUsageModule >("GpuUsage");
     FVector2D ScaleVec(1.4f, 1.4f);
     FCanvasTextItem SpeedTextItem(FVector2D(20.f, 20.f), FText::AsNumber(Module.QueryCurrentLoad()), HUDFont, FLinearColor::White);
     SpeedTextItem.Scale = ScaleVec;

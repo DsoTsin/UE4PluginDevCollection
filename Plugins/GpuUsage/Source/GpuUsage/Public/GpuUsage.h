@@ -5,14 +5,13 @@
 #include "CoreMinimal.h"
 #include "ModuleManager.h"
 
-class FGpuUsageModule : public IModuleInterface
+
+/**
+* The public interface to this module
+*/
+class IGpuUsageModule : public IModuleInterface
 {
 public:
 
-	/** IModuleInterface implementation */
-	virtual void StartupModule() override;
-	virtual void ShutdownModule() override;
-
-  int QueryCurrentLoad();
-
+    virtual int QueryCurrentLoad() = 0; /*{ return 0; }*/
 };

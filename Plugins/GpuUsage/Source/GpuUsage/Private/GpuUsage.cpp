@@ -4,6 +4,18 @@
 
 #define LOCTEXT_NAMESPACE "FGpuUsageModule"
 
+class FGpuUsageModule : public IGpuUsageModule
+{
+public:
+
+    /** IModuleInterface implementation */
+    virtual void StartupModule() override;
+    virtual void ShutdownModule() override;
+
+    int QueryCurrentLoad() override;
+
+};
+
 #if PLATFORM_WINDOWS 
 #include "AllowWindowsPlatformTypes.h"
 #include "HideWindowsPlatformTypes.h"
@@ -56,6 +68,7 @@ void FGpuUsageModule::StartupModule()
   NvGpuUsages[0] = (NVAPI_MAX_USAGES_PER_GPU * 4) | 0x10000;
   (*NvAPI_EnumPhysicalGPUs)(NvGpuHandles, &NvGpuCount);
 #endif
+  //GEngine
 }
 
 void FGpuUsageModule::ShutdownModule()

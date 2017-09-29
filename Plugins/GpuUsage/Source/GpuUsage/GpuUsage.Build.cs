@@ -4,7 +4,7 @@ using UnrealBuildTool;
 
 public class GpuUsage : ModuleRules
 {
-	public GpuUsage(ReadOnlyTargetRules Target) : base(Target)
+	public GpuUsage(TargetInfo Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
