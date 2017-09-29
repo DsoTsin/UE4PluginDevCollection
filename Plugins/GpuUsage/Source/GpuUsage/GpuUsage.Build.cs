@@ -40,6 +40,7 @@ public class GpuUsage : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "nvapi"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
